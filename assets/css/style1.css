@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    color: rgb(240, 240, 94);
+    background-color:black;
+    font-family: sans-serif;
+    background-image: url("../image/bg3.jpg");
+    background-color: rgb(5, 4, 4,0.6);
+    background-blend-mode: multiply;
+    background-repeat: repeat-y;
+    background-size:cover;
+    
+    
+    
+}
+
+.main-header{
+    background-image: url("../image/header3.jpg");
+    background-blend-mode: multiply;
+    background-color: #00000075;
+    background-size: cover;
+    margin : 0;
+    padding: 16px;
+    padding-top: 2px;
+    text-align: center;
+    
+    
+
+}
+.main-nav li{
+    display:inline;
+    margin: 0 20px 0 20px;
+    margin-left: 0;
+    padding-top: 0;
+    
+}
+.main-nav a{
+    text-decoration: none;
+    font-style: inherit;
+    font-size:1rem ;
+    color: yellow;
+}
+
+.main-nav a:hover{
+    background-color:rgba(232, 248, 12, 0) ;
+    color: rgb(229, 233, 16);
+    font-size: 2rem; 
+    cursor: pointer;
+}
+.main-nav a:active{
+    color: rgb(189, 51, 85);
+}
+.main-nav{
+    margin-top: 2px;
+}
+.main-title{
+    text-align: center;
+    font-family: sans-serif;
+    margin-bottom: 1px;
+
+}
+h4{
+    margin: 0;
+    margin-left: 50px;
+    color:lawngreen;
+    text-align: center;
+    font-size:20px;
+}
+.ongoing-anime{
+    border:1px solid skyblue;
+    background-color: rgb(17, 12, 12,0.3);
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    padding:16px;
+    margin:8% auto 0;
+    font-size:20px;
+    
+}
+hr{
+    border-color: yellow;
+    
+}
+.ongoing-anime span{
+    
+    margin:20px;
+    color : yellow !important;
+}
+
+.ongoing-anime li{
+    list-style-type: none;
+    padding-left:0;
+    margin-left: 0;
+    border-bottom:1px solid white;
+    margin-bottom:1em;
+    font-size:1vw;
+    color: white;
+}
+h2{
+    text-align: center;
+    color:yellow;
+    font-size: 25px;
+    
+    background-color: rgba(10, 10, 7, 0.3);
+
+}
+.season-title{
+    color:black;
+    font-size: 1.5vw;
+    border:2px solid white;
+    background-color: rgb(22, 17, 17,0.4);
+
+}
+input[type=text ],
+input[type=password]{
+    color: white;
+    padding:6px;
+    margin: 6px;
+    margin-top: 0;
+    border: none;
+    background-color: rgb(129, 184, 197 ,0);
+    border-bottom: 2px solid yellow;
+    outline: none;
+    box-sizing: border-box;
+    resize:vertical;
+    font-size: 16px;
+}
+.login-body{
+    background-image: url("../image/bg2.jpg");
+    background-color: rgb(143, 137, 137,0.9);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    width: 300px;
+    border: 1px solid black;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    border-radius: 5px;
+    padding: 12px;
+    background-color: rgba(14, 8, 8, 0.5);
+    margin:8% auto 0 ;
+    text-align: center;
+    font-size:20px ;
+   
+}
+label{
+    display: inline-block;
+    padding-bottom: 6px;
+    margin: 10px;
+    margin-bottom: 0;
+}
+button{
+    background-color: yellow;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid yellow;
+    border-radius: 10%;
+    width: 70px;
+    height:40px;
+    display: inline-block;
+    margin:20px;
+    font-size: 16px;
+    cursor: pointer;
+
+
+}
+p{
+    font-size: 18px;
+    color:white;
+}
+.container-details{
+    width: 600px;
+    border: 1px solid black;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    border-radius: 5px;
+    padding: 12px;
+    background-color: rgba(14, 8, 8, 0.5);
+    margin:8% auto 0 ;
+    text-align: center;
+    font-size:30px ;
+}
+h3{
+    color: yellow;
+    font-size: 30px;
+}
+.detail-body{
+    background-image: url("../image/bg4.jpg");
+    background-color: rgb(5, 4, 4,0.5);
+    background-blend-mode: multiply;
+    background-size: cover;
+}

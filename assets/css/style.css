@@ -1,0 +1,15 @@
+body,html{
+    padding: 0;
+    margin: 0;
+}
+
+ .main-header{
+    background-image: url("pics/header.jpg") ;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+.main-nav li{
+    display:inline;
+    margin:.3em;
+    text-decoration: none;
+}

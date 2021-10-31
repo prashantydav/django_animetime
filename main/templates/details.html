@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>details</title>
+    <link rel="stylesheet" href="{%static 'css/style1.css'%}">
+</head>
+<body class="detail-body">
+   
+
+
+<div class="container-details">
+    <div class="title">
+        <h2>{{obj.name}}</h2> 
+    </div>
+    <div class="genre">
+        <h3>Genre</h3>
+        <p>{{obj.genre}}</p>
+    </div>
+    <div class="discription">
+        <h3>Discription</h3>
+        <p>{{obj.discription}}</p>
+    </div>
+    <div class="production">
+        <h3>Production</h3>
+        <p>{{obj.production}}</p>
+    </div>
+    <div class="season">
+        <h3>season</h3>
+        <p>{{obj.season}}</p>
+    </div>
+    <div class="episodes">
+        <h3>episodes</h3>
+        <p>{{obj.episodes}}</p>
+    </div>
+    <div class="release-date">
+        <h3>Premiered On</h3>
+        {% if obj.premiered_date == "'" %}
+        <p>date not yet release-date</p>
+        {% else %}
+        <p>{{obj.premeire_date}}</p>
+        {% endif %}
+    </div>
+    <!-- Display the countdown timer in an element -->
+<p id="demo"></p>
+
+<script type="text/javascript">
+// Set the date we're counting down to
+var date_time = "{{obj.premeire_date}}";
+var countDownDate = new Date(date_time).getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance =  now - countDownDate   ;
+
+  one_week = 60,48,00,000;
+
+  var episodes = parseInt("{{obj.episodes}}");
+
+//   console.log(typeof(episodes));
+
+var arr = new Array();
+
+var current ;
+
+for (var i = 1; i < episodes ; i++){
+    arr.unshift(distance + (i * one_week)) ;
+}
+
+for (var i = 1 ; i < episodes; i++ ) {
+    if (distance < arr[i]){
+        current = i;
+    }
+    if (distance >= arr[i]){
+        distance = arr[i] - now;
+        current = i;
+    }
+}
+
+
+
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24))%7;
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s " + " for episode " + current;
+
+  // If the count down is finished, write some text
+//   if (distance < 0) {
+//     clearInterval(x);
+//     document.getElementById("demo").innerHTML = "EXPIRED";
+//   }
+}, 1000);
+</script>
+    
+
+</div>
+    
+</body>
+</html>
+{% endblock %}

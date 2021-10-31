@@ -1,0 +1,1 @@
+print(len(p.get_release_date()[57]))

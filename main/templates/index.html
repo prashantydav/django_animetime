@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ANIMETIME|INDEX</title>
+   <link rel="stylesheet" href="{%static 'css/style1.css'%}">
+</head>
+<body>
+   <section class="index-section">
+      <h2>ONGOING ANIME</h2>
+      <h3 class="season-title">{{sea}}</h3>
+
+   <div class ="ongoing-anime">
+      <h4>{{sea}}</h4>
+      
+         <ul>
+            <li>
+               <span>S.no</span>
+               <span class="name">Name</span>
+            </li>
+            {% for i in obj %}
+            <li>
+               <span>{{i.anime_id}}</span>
+              <span><a href={{i.get_absolute_url}}>{{i.name}}</a></span>
+            </li>
+            {% endfor %}
+         </ul>
+   </div>
+</section>
+
+{% endblock %}
+</body>
+</html>

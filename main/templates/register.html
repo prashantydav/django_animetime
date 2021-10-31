@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    <link rel="stylesheet" href="{%static 'css/style1.css'%}">
+</head>
+<body class="login-body"> 
+    <div class="container">
+        <form method = 'post' >
+            {% csrf_token %}
+            <h3>SIGN UP</h3>
+            {% for field in form %}
+            <div class="row">
+                <div class="col25">
+                    <label for={{field.label}}>{{field.label}}</label>
+                </div>
+            <div class="col75">
+                <input type={{field}} id={{field.label}} name={{field.label}}>
+            </div>
+            
+            </div>
+            
+            
+            
+            {% endfor %}
+            <button type="submit">sign up</button><br>
+            <button type="submit"><a href="{% url 'login' %}">login</a></button>
+       
+            {% for message in messages %}
+            {{message}}
+            {% endfor %}
+            
+    </div>
+ 
+
+ </form>
+ 
+ 
+
+    
+</body>
+</html>
